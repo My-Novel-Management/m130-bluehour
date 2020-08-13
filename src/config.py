@@ -9,10 +9,14 @@ ASSET = {
             # (tag / name / full / age (birth) / job / call / info)
             ('tatsu', 'タツヤ', 'ハシウチ,タツヤ', 20,(1,1), 'male', '高校生', "me:ボク"),
             ("akane", "アカネ", "ニキ,アカネ", 20,(1,1), "female", "謎の女性", "me:私"),
-            ("gado", "ガドウ", "", 45,(1,1), "male", "霊媒師", "me:俺"),
+            ("niki", "アカネ", "ニキ,アカネ", 30,(1,1), "female", "主婦", "me:私"),
+            ("gado", "ガドウ", "", 30,(1,1), "male", "霊媒師", "me:俺"),
             ),
         "STAGES": (
             # (tag / name / parent / (geometry) / info)
+            ("Crossroad", "交差点", "Tokyo"),
+            ("NPshop", "新聞販売店", "Tokyo"),
+            ("Room", "タツヤの部屋", "Tokyo"),
             ),
         "DAYS": (
             # (tag / name / month / day / year)
