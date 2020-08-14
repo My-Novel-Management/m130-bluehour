@@ -14,8 +14,8 @@ ASSET = {
             ),
         "STAGES": (
             # (tag / name / parent / (geometry) / info)
-            ("Crossroad", "交差点", "Tokyo"),
-            ("NPshop", "新聞販売店", "Tokyo"),
+            ("CrossRoad", "交差点", "Tokyo"),
+            ("NewspaperShop", "新聞販売店", "Tokyo"),
             ("Room", "タツヤの部屋", "Tokyo"),
             ),
         "DAYS": (

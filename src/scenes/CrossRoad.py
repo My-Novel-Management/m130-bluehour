@@ -11,7 +11,11 @@ from storybuilder.builder.world import World
 
 ## scenes
 def bluehour_photo(w: World):
+    ta, akane = w.get("tatsu"), w.get("akane")
     return w.scene('ブルーアワーの写真',
+            w.cmd.change_camera("tatsu"),
+            w.cmd.change_stage("CrossRoad"),
+            w.cmd.change_time("earlymorning"),
             "交差点：ブルーアワーの空と町並みを写真に。彼女に気づく",
             w.plot_note("$tatsuは明け方の新聞配達を終えて、交差点に差し掛かる",
                 "そこで空が紺色になり、街が青く染め上げられる様を目にした",
@@ -25,14 +29,18 @@ def bluehour_photo(w: World):
 
 
 def looping(w: World):
+    ta, akane = w.get("tatsu"), w.get("akane")
     return w.scene("繰り返すブルーアワー",
+            w.cmd.change_stage("CrossRoad"),
             w.plot_note("何日経っても三月十三日から動かず、$tatsuは同じ日を繰り返していた"),
             w.plot_note("いつも配達を終えて、毎朝ブルーアワーに遭遇し、ブルーアワーの君と内心で呼ぶことにした彼女を見る"),
             )
 
 
 def changing_her(w: World):
+    ta, akane = w.get("tatsu"), w.get("akane")
     return w.scene("変化していく彼女",
+            w.cmd.change_stage("CrossRoad"),
             w.plot_note("ただ数日して、彼女が徐々に変化していくのに気づいた",
                 "最初は髪型が違うな、程度だったが、徐々に季節外れの服装をするようになり、",
                 "それに伴って自分の周囲の季節もズレ始めた"),
@@ -40,12 +48,16 @@ def changing_her(w: World):
 
 
 def sliding_season(w: World):
+    ta, akane = w.get("tatsu"), w.get("akane")
     return w.scene("ズレゆく季節",
+            w.cmd.change_stage("CrossRoad"),
             )
 
 
 def cannot_talk(w: World):
+    ta, akane = w.get("tatsu"), w.get("akane")
     return w.scene("話せない彼女",
+            w.cmd.change_stage("CrossRoad"),
             w.plot_note("$tatsuはある日、彼女と話してみようと決断する",
                 "いざ話しかけてみると彼女は喜んだような表情になるが、口がぱくぱくするばかりで何も聞こえなかった"),
             w.plot_note("話せないのだと分かり、それでも何とか彼女が伝えたいことを読み取ろうとメモを渡してみたりするが、",
@@ -54,7 +66,9 @@ def cannot_talk(w: World):
 
 
 def strange_man(w: World):
+    ta, akane = w.get("tatsu"), w.get("akane")
     return w.scene("奇妙な男",
+            w.cmd.change_stage("CrossRoad"),
             w.plot_note("ある日、彼女を監視している別の男の存在に気づいた"),
             w.plot_note("彼女と口論している男を見て、$tatsuは助けようとした",
                 "だがブルーアワーが終わると同時に二人の姿は目の前から消えてしまう"),
@@ -62,14 +76,18 @@ def strange_man(w: World):
 
 
 def strange_awake(w: World):
+    ta, akane = w.get("tatsu"), w.get("akane")
     return w.scene("奇妙な目覚め",
+            w.cmd.change_stage("CrossRoad"),
             w.plot_note("その日を境に、更に$tatsuの世界はゆがみ始める"),
             w.plot_note("目覚めると朝ではなく新聞配達の途中で、空はまだその時間帯ではないのにブルーアワーに染まっている"),
             )
 
 
 def closing_world(w: World):
+    ta, akane = w.get("tatsu"), w.get("akane")
     return w.scene("閉鎖世界",
+            w.cmd.change_stage("CrossRoad"),
             w.plot_note("しかし交差点に彼女の姿はなく、ただあの男がずっと立って睨みつけている"),
             w.plot_note("$tatsuは男に彼女をどうしたのか訊いたが、男は「もう彼女には近づくな」と言った"),
             w.plot_note("$tatsuは男を通報しようとしたが、電話が繋がらない"),
@@ -79,7 +97,9 @@ def closing_world(w: World):
 
 
 def truth(w: World):
+    ta, akane = w.get("tatsu"), w.get("akane")
     return w.scene("真実",
+            w.cmd.change_stage("CrossRoad"),
             w.plot_note("それを思い出した瞬間に、世界があの日に戻る"),
             w.plot_note("自転車に乗りながらガラケーを手に、ショートメールでどうやって思いを伝えるか悩んでいた"),
             "SMSの文字数、料金はそれぞれの携帯会社、またその機種や契約種により変わる。最小は５０文字でよかある制限は７０文字だったが、2019年にドコモなどでは６７０文字まで拡張されたりした",
