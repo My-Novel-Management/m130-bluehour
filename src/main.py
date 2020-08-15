@@ -58,7 +58,7 @@ def ep_strange_lady(w: World):
             w.plot_setup("$tatsuは新聞屋の娘に恋心を抱いていて、卒業して大学に行く前に告白しようと考えていた"),
             CrossRoad.bluehour_photo(w),
             NewspaperShop.familylike(w),
-            Room.confess_thought(w),
+            Room.confess_thought(w).omit(),
             w.plot_turnpoint("$tatsuは日付が卒業式前で止まったままだと気づく"),
             Room.sameday(w),
             "新聞の日付や見出しで確認できる",
@@ -73,9 +73,10 @@ def ep_strange_lady(w: World):
 def ep_stopping_time(w: World):
     return w.episode("静止した時間の中で",
             w.plot_develop("彼女に会ってからずっと時間が進まずに、$tatsuは卒業前の時空に閉じ込められてしまう"),
+            NewspaperShop.sameday2(w),
             CrossRoad.looping(w),
             CrossRoad.changing_her(w),
-            CrossRoad.sliding_season(w),
+            CrossRoad.sliding_season(w).omit(),
             CrossRoad.cannot_talk(w),
             w.plot_develop("彼女は言葉が話せず、何を伝えたがっているのか理解できない"),
             w.plot_develop("彼女と意思疎通をしようと色々と工夫するが、彼女の返信はいつもブルーアワーで消えてしまう"),
@@ -93,6 +94,7 @@ def ep_ghost_talk(w: World):
     return w.episode("幽霊の君と",
             w.plot_resolve("自分が幽霊だったと知り、交通事故に遭った日のことを全て思い出す"),
             CrossRoad.truth(w),
+            CrossRoad.last_hour(w),
             outline="ブルーアワーの君の真実が明らかになり、幽霊だと知った$tatsuは彼女の思いを昇華させ、成仏していった")
 
 
