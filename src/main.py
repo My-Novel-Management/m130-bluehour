@@ -33,7 +33,7 @@ from scenes import Room
 
 # Constant
 TITLE = "ブルーアワーの君"
-MAJOR, MINOR, MICRO = 0, 7, 0
+MAJOR, MINOR, MICRO = 0, 8, 0
 COPY = "その瞬間だけ、君に会える"
 ONELINE = "ブルーアワー（日の出前日の入り後の空が濃紺に染まる時間帯）にだけ会える彼女がいた"
 OUTLINE = "約8000字の幻想短編。明け方のブルーアワーにだけ出会うことのできる不思議な女性に恋をした新聞配達員の男性は、彼女と何とか交流しようとするが"
@@ -75,15 +75,15 @@ def ep_stopping_time(w: World):
             w.plot_develop("彼女に会ってからずっと時間が進まずに、$tatsuは卒業前の時空に閉じ込められてしまう"),
             NewspaperShop.sameday2(w),
             CrossRoad.looping(w),
-            CrossRoad.changing_her(w),
+            CrossRoad.changing_her(w).omit(),
             CrossRoad.sliding_season(w).omit(),
             CrossRoad.cannot_talk(w),
             w.plot_develop("彼女は言葉が話せず、何を伝えたがっているのか理解できない"),
             w.plot_develop("彼女と意思疎通をしようと色々と工夫するが、彼女の返信はいつもブルーアワーで消えてしまう"),
             Room.thinking_her(w),
-            Room.passed_seasons(w),
+            Room.passed_seasons(w).omit(),
             CrossRoad.strange_man(w),
-            CrossRoad.strange_awake(w),
+            CrossRoad.strange_awake(w).omit(),
             CrossRoad.closing_world(w),
             w.plot_turnpoint("男は$tatsuに「お前が幽霊なんだ」と言い放った"),
             "彼女の父親はずっと引きずっているのを心配して、霊媒師を呼んだ",
