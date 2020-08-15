@@ -33,7 +33,7 @@ from scenes import Room
 
 # Constant
 TITLE = "ブルーアワーの君"
-MAJOR, MINOR, MICRO = 0, 6, 0
+MAJOR, MINOR, MICRO = 0, 7, 0
 COPY = "その瞬間だけ、君に会える"
 ONELINE = "ブルーアワー（日の出前日の入り後の空が濃紺に染まる時間帯）にだけ会える彼女がいた"
 OUTLINE = "約8000字の幻想短編。明け方のブルーアワーにだけ出会うことのできる不思議な女性に恋をした新聞配達員の男性は、彼女と何とか交流しようとするが"
