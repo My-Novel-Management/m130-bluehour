@@ -8,10 +8,11 @@ ASSET = {
         "PERSONS": (
             # (tag / name / full / age (birth) / job / call / info)
             ('tatsu', 'タツヤ', 'ハシウチ,タツヤ', 20,(1,1), 'male', '高校生', "me:僕"),
-            ("akane", "アカネ", "ニキ,アカネ", 20,(1,1), "female", "謎の女性", "me:わたし"),
+            ("akane", "アカネ", "オオトリ,アカネ", 20,(1,1), "female", "謎の女性", "me:わたし"),
             ("niki", "アカネ", "ニキ,アカネ", 30,(1,1), "female", "主婦", "me:わたし"),
             ("gado", "ガドウ", "", 30,(1,1), "male", "霊媒師", "me:オレ"),
             ("dad", "アカネの父", "", 50,(1,1), "male", "新聞販売", "me:俺"),
+            ("yoshi", "ヨシダ", "", 55,(1,1), "male", "不動産屋", "me:俺"),
             ),
         "STAGES": (
             # (tag / name / parent / (geometry) / info)
