@@ -33,25 +33,25 @@ from scenes import Room
 
 # Constant
 TITLE = "ブルーアワーの君"
-MAJOR, MINOR, MICRO = 0, 9, 0
-COPY = "その瞬間だけ、君に会える"
-ONELINE = "ブルーアワー（日の出前日の入り後の空が濃紺に染まる時間帯）にだけ会える彼女がいた"
-OUTLINE = "約8000字の幻想短編。明け方のブルーアワーにだけ出会うことのできる不思議な女性に恋をした新聞配達員の男性は、彼女と何とか交流しようとするが"
+MAJOR, MINOR, MICRO = 1, 0, 0
+COPY = "その時間だけ、君に会える"
+ONELINE = "約1万3000字の幻想短編。ブルーアワーの写真を撮影しようとした男子学生は、奇妙な女を見る"
+OUTLINE = "明け方のブルーアワーにだけその交差点で出会う不思議な女性がいた。彼女に出会ってから高校生のタツヤの時間は不思議な歪みを見せ始める"
 THEME = "思いのすれ違い"
 GENRE = "ファンタジー／恋愛／ミステリ"
 TARGET = "20-40years"
 SIZE = "8K"
-CONTEST_INFO = "妄想コンテスト「あと５分」"
+CONTEST_INFO = ""
 CAUTION = ""
 NOTE = ""
 SITES = ["エブリスタ", "小説家になろう", "ノベルアッププラス", "カクヨム"]
-TAGS = ["ヒューマンドラマ", "男主人公", "幻想"]
-RELEASED = (1, 1, 2020)
+TAGS = ["ヒューマンドラマ", "男主人公", "幻想", "カメラ", "写真", "ブルーアワー", "マジックアワー"]
+RELEASED = (8, 19, 2020)
 
 
 # Episodes
 def ep_strange_lady(w: World):
-    return w.episode("奇妙な女性",
+    return w.episode("ブルーアワー",
             w.plot_setup("$tatsuは学校に行きながら新聞配達をしている学生だった"),
             w.plot_setup("毎月十三日のブルーアワーの時、新聞配達を終えて帰る交差点に現れる謎の女性がいることに気づく"),
             w.plot_setup("彼女はスマートフォンでこっそり$tatsuの姿を撮影していた"),
@@ -59,6 +59,7 @@ def ep_strange_lady(w: World):
             CrossRoad.bluehour_photo(w),
             NewspaperShop.familylike(w),
             Room.confess_thought(w).omit(),
+            Room.sameday(w),
             w.plot_turnpoint("$tatsuは日付が卒業式前で止まったままだと気づく"),
             "新聞の日付や見出しで確認できる",
             "スマートフォンの日付が三月十三日から動かない",
@@ -70,9 +71,8 @@ def ep_strange_lady(w: World):
 
 
 def ep_stopping_time(w: World):
-    return w.episode("静止した時間の中で",
+    return w.episode("ブルーアワーを撮る女",
             w.plot_develop("彼女に会ってからずっと時間が進まずに、$tatsuは卒業前の時空に閉じ込められてしまう"),
-            Room.sameday(w),
             CrossRoad.looping(w),
             NewspaperShop.sameday2(w),
             CrossRoad.changing_her(w).omit(),
@@ -80,7 +80,7 @@ def ep_stopping_time(w: World):
             outline="彼女の存在に気づいてから、時間がゆがみ始めた")
 
 def ep_stranger(w: World):
-    return w.episode("奇妙な男",
+    return w.episode("繰り返すブルーアワー",
             CrossRoad.cannot_talk(w),
             w.plot_develop("彼女は言葉が話せず、何を伝えたがっているのか理解できない"),
             w.plot_develop("彼女と意思疎通をしようと色々と工夫するが、彼女の返信はいつもブルーアワーで消えてしまう"),
@@ -94,7 +94,7 @@ def ep_stranger(w: World):
             )
 
 def ep_ghost_talk(w: World):
-    return w.episode("幽霊の君と",
+    return w.episode("ブルーアワーの君",
             w.plot_resolve("自分が幽霊だったと知り、交通事故に遭った日のことを全て思い出す"),
             CrossRoad.truth(w),
             CrossRoad.last_hour(w),
